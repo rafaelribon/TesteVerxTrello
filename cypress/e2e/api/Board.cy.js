@@ -105,7 +105,7 @@ describe('Board',()=> {
     })
 
 
-    it.only("Delete id Board invalido", () => {
+    it("Delete id Board invalido", () => {
 
         cy.api({
             method: 'DELETE',
@@ -116,9 +116,10 @@ describe('Board',()=> {
                 token: token
 
             },
+            failOnStatusCode: false
 
         }).then((response) => {
-            expect(response.status).to.equal(200);
+            expect(response.status).to.equal(404);
          
 
 
@@ -146,22 +147,6 @@ describe('Board',()=> {
 
         })
     })
-
-
-
-        it.only('Teste ', () => {
-            cy.api_consultarBoard()
-             .then(response => {
-                expect(response.status).to.equal(200)
-                expect(response.body.name).to.equal('Teste vai')
-                cy.log(response.body.id)
-
-             })
-            
-            
-        });
-
-
        
     })
 
