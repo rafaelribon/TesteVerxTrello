@@ -1,0 +1,16 @@
+{
+  "name": "testeapiverx",
+  "version": "1.0.0",
+  "description": "Teste da API do Trello",
+  "main": "index.js",
+  "scripts": {
+    "cy:open": "cypress open",
+    "test": "cypress run"
+  },
+  "author": "Rafael Ribon",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^13.6.2",
+    "cypress-plugin-api": "^2.11.1"
+  }
+}
